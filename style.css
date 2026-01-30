@@ -13,25 +13,84 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
     margin: 0;
+    height: 100%;
     font-family: 'Poppins', sans-serif;
-    background-image: linear-gradient(90deg, #E9E4FF, #8F7BFF, #6B4EFF);
 }
 
 .hero {
-    width: 600px;
-    height: 600px;
-    background-color: #F8F6FF;
+    /* Dette gjør at den dekker hele skjermen */
+    min-height: 100vh;
+
+    /* Layout/flex */
+    display: flex;
     justify-content: center;
-    margin: 0 auto;
-    border-radius: 10px; 
+    align-items: center;
+    
+    /* Gradienten som er i bakgrunnen */
+    background: linear-gradient(135deg, #6B4EFF, #C9A7FF);
 }
 
 .card {
+    /* Størrelse */
+    width: 90%;
+    max-width: 600px;
+    min-height: 600px;
+    height: auto;
+
+    /* Layout/flex */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    /* Margin/plassering */
+    margin: 0 auto;
     
+
+    /* Utseende/stil */
+    background-color: #F8F6FF;
+    border-radius: 10px; 
 }
 
 .card-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    background-color: #F0ecff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 
+.card-content {
+    display: flex;
+    flex-direction: column;   /* ovenfra og ned */
+    align-items: center;      /* midtstilt horisontalt */
+    text-align: center;       /* tekst også midtstilt */
+    gap: 1.5rem;              /* luft mellom elementene */
+    color: #2E1A47;
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: #4B2D8F;
+}
+
+.links a:hover {
+  color: #E3DAFF;
+}
+
+.footer {
+    
+    
 }
