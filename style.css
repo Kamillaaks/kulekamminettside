@@ -94,3 +94,18 @@ html, body {
     
     
 }
+
+.icon-home {
+    width: 32px;
+    height: 32px;
+}
+
+a {
+    display: inline-block;
+    cursor: pointer;
+}
+
+a:hover .icon-home {
+    fill: #C9A7FF;
+    transform: scale(1.1);
+}
