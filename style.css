@@ -8,7 +8,23 @@
   --violet-text: #1F1235;
   --violet-accent: #C9A7FF;
 }
+:root {
+  --blue-primary: #3B82F6;
+  --blue-hover: #2563EB;
+  --blue-light: #60A5FA;
 
+  --bg-main: #F8FAFC;
+  --bg-section: #F1F5F9;
+  --bg-card: #FFFFFF;
+
+  --text-heading: #0F172A;
+  --text-body: #334155;
+  --text-muted: #64748B;
+
+  --border-default: #E2E8F0;
+
+  --heart-active: #F43F5E;
+}
 * {
   box-sizing: border-box;
 }
