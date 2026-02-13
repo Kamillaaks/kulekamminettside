@@ -1,127 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
 :root {
-  --violet-primary: #6B4EFF;
-  --violet-dark: #2E1A47;
-  --violet-soft: #E9E4FF;
-  --violet-bg: #F8F6FF;
-  --violet-text: #1F1235;
-  --violet-accent: #C9A7FF;
+  /* Bakgrunn */
+  --bg-light: #fef9e8;    /* Kremgul */
+  --bg-dark: #7a2f28;     /* Mørkrød */
+
+  /* Tekst */
+  --text-dark: #1b0503;   /* Svart med rødlig undertone */
+  --text-light: #ffffff;  /* Hvit */
+
+  /* Aksent / interaksjon */
+  --accent-light: #fdf3c2; /* Lys sitron/oransje */
+  --accent-dark: #7a2f28;  /* Mørkrød */
+
+  /* Detaljer */
+  --detail: #97916f;       /* Dempet brun/oliven */
 }
-:root {
-  --blue-primary: #3B82F6;
-  --blue-hover: #2563EB;
-  --blue-light: #60A5FA;
 
-  --bg-main: #F8FAFC;
-  --bg-section: #F1F5F9;
-  --bg-card: #FFFFFF;
-
-  --text-heading: #0F172A;
-  --text-body: #334155;
-  --text-muted: #64748B;
-
-  --border-default: #E2E8F0;
-
-  --heart-active: #F43F5E;
-}
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
+body {
+    font-family: "Poppins", sans-serif;
+  --bg-dark: #7a2f28;     /* Mørkrød */
+    background: var(--bg-dark);
+    color: var(--accent-dark);
+
 }
 
 .hero {
-    /* Dette gjør at den dekker hele skjermen */
     min-height: 100vh;
-
-    /* Layout/flex */
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* Gradienten som er i bakgrunnen */
-    background: linear-gradient(135deg, #6B4EFF, #C9A7FF);
+    flex-direction: column;
 }
 
 .card {
-    /* Størrelse */
     width: 90%;
     max-width: 600px;
     min-height: 600px;
-    height: auto;
 
-    /* Layout/flex */
+    background-color: var(--bg-light);
+    border-radius: 12px;
+
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-
-    /* Margin/plassering */
-    margin: 0 auto;
-    
-
-    /* Utseende/stil */
-    background-color: #F8F6FF;
-    border-radius: 10px; 
-}
-
-.card-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 0.5rem;
-    padding: 1rem;
-    width: 100%;
-    background-color: #F0ecff;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;   /* ovenfra og ned */
-    align-items: center;      /* midtstilt horisontalt */
-    text-align: center;       /* tekst også midtstilt */
-    gap: 1.5rem;              /* luft mellom elementene */
-    color: #2E1A47;
-}
-
-.links {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
-.links a {
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+
+    height: 100%;
+    padding: 2rem;
+}
+
+.card-content::before,
+.card-content::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50px;
+    /*background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23fdf3c2"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');*/
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%237a2f28"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
+    background-repeat: repeat-x;
+    background-position: center;
+}
+
+.card-content::before {
+  margin-bottom: 1rem;
+}
+
+.card-content::after {
+  margin-top: 1rem;
+}
+
+.card-content h1 {
+    font-family: "Cooper Black", serif;
+    font-size: 3rem;
+}
+
+.card-content h2 {
+    font-weight: 100;
+    font-size: 1.3rem;
+}
+
+.links a{
     text-decoration: none;
-    color: #4B2D8F;
+    color:  var(--text-dark);
+    font-size: 1rem;
 }
 
-.links a:hover {
-  color: #E3DAFF;
+a:hover {
+    color: var(--accent-light);
 }
 
-.footer {
-    
-    
-}
-
-.icon-home {
-    width: 32px;
-    height: 32px;
-}
-
-a {
-    display: inline-block;
-    cursor: pointer;
-}
-
-a:hover .icon-home {
-    fill: #C9A7FF;
-    transform: scale(1.1);
+.card-footer {
+    margin-top: auto;
+    padding: 1rem 2rem;
+    font-size: 0.85rem;
+    color: var(--bg-light);
 }
