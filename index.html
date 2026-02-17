@@ -1,54 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Tegnkoding -->
     <meta charset="UTF-8">
-
-    <!-- Viewport for responsivt design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO og metadata-->
-    <title>Kulekammi</title>
-    <meta name="description" content="Kulekammi is in the hood" />
+    <title>Kamilla Selnes</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css"/>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/lgb5bbt.css">
-    <!-- Kritisk CSS som påvirker første lasting
-    <style>
-      /* Minimal CSS som trengs for å vise siden korrekt først */
-    </style> -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 </head>
-<body>
-    <main>
-        <section class="hero">
-            <article class="card">
-              
-                <div class="card-content">
-                    <h1>It's me, Kamilla!</h1>
-                    <h2>Frontend developer</h2>
-                    <nav>
-                    <nav class="links">
-                        <a href="#">About me</a>
-                        |
-                        <a href="#">Projects</a>
-                        |
-                        <a href="#">GitHub</a>
-                        |
-                        <a href="#">Socials</a>
-                        |
-                        <a href="#">Contact me</a>
-                    </nav>
-                    
-                </nav>
-                </div>
-                <footer class="card-footer">
-                    <p>© 2026 Kamilla Selnes</p>
-                </footer>
-            </article>
-        </section>
-    </main>
+<body id="main">
+    <header class="header">
+        <h1 class="header-logo">
+            <a href="#main" class="home">Kamilla</a>
+        </h1>
+        <nav>
+            <ul class="header-links">
+                <li>
+                    <a href="https://github.com/Kamillaaks">
+                        <img src="images/GitHub_Invertocat_Black_Clearspace.svg" alt="GitHub-logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/kamilla-selnes-a55bb5117/">
+                        <img src="images/InBug-Black.png" alt="LinkedIn-logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:someone@example.com">
+                        <img src="images/iconmonstr-email-1.svg" alt="Email-logo">
+                    </a>
+                </li> 
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <div class="hero-text-inner">
+                <h1>
+                    Hei, jeg er Kamilla.
+                </h1>
+                <p class="intro">
+                    Frontend-student med interesse for design og utvikling.
+                </p>
+                <p>
+                    Jeg lærer å bygge nettsider og digitale løsninger med fokus på struktur, estetikk og funksjon.
+                </p>
+                <p>
+                    Jeg trives best når jeg får kombinere det visuelle med det tekniske, og når jeg kan utvikle prosjekter som føles gjennomtenkte og personlige.
+                </p>
+                <a href="#projects" class="cta-button">Se prosjekter</a>
+            </div> 
+        </div>
+        <div class="hero-img">
+            <img src="images/fjell1.jpg">
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>
+                Om meg
+            </h2>
+            <p class="intro">
+                Jeg heter Kamilla Selnes, er 29 år og kommer fra vakre Balsfjord i Nord-Norge. (Æ e altså ekte nordlending)
+            </p>
+            <p>
+                Da jeg var liten lagde jeg min aller første nettside på piczo, før jeg gikk videre til å lage kule design på minstall, og til slutt endte opp med å lage min egne blogg på tumblr. <br>
+                Gjennom alle disse årene har koding alltid fascinert meg, men det har bare blitt med tanken. Jeg er ikke spesielt glad i matte, og trodde man måtte være dritgod i det for å kunne lære seg å kode. <br>
+                I min forrige jobb, jobbet jeg som møtebooker en stund, og der hørte jeg om GET Academy. Det var akkurat som om en ny verden åpnet seg for meg, da jeg forstod at jeg kunne begynne å kode, uten å være et mattegeni!! <br>
+                Jeg søkte, kom inn, og siden det har jeg lært meg vanvittig mye gøy og interessant.
+                Ikke bare har jeg lært hvordan man koder, men jeg har også lært å kjenne meg selv bedre - både på godt og vondt. Det høres veldig klisjé ut, men det er faktisk sant. 
+                Jeg lærer HTML, CSS, JavaScript, Typescript, og har også vært innom C#. Jeg trives veldig godt med alle disse språkene, og gleder meg til å lære enda mer! 
+            </p>
+        </div>
+
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2 class="projects-title">
+            Mine prosjekter
+        </h2>
+
+        <div class="projects-grid">
+            <a href="" class="project-card">
+                <img src="images/lilla.jpg" alt="Prosjekt 1 preview">
+                <h3>Prosjekt 1</h3>
+            </a>
+
+            <a href="" class="project-card">
+                <img src="images/lilla2.jpg" alt="Prosjekt 1 preview">
+                <h3>Prosjekt 2</h3>
+            </a>
+
+            <a href="" class="project-card">
+                <img src="images/rød.jpg" alt="Prosjekt 1 preview">
+                <h3>Prosjekt 3</h3>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Kamilla Selnes. Alle rettigheter reservert. | Laget med kjærlighet, blod, tårer og en del HTML/CSS♥︎ </p>
+    </footer>
 </body>
 </html>
