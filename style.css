@@ -124,24 +124,23 @@ html {
     gap: 20px;
 }
 
-.projects-grid img{
-    height: 500px;
+/* .projects-grid img{
+    height: 40rem;
     width: auto;
     object-fit: cover;
     display: block;
-}
+} */
 
 .project-card {
-    display: block;
     text-decoration: none;
     color: inherit; /* Tvinger teksten til å få samme farge fra sitt direkte overordnede element */
     overflow: hidden;
-
 }
 
 .project-card img {
-    width: 100%;
-    display: block;
+    height: 40rem;
+    width: 100%; 
+    object-fit: cover;
 }
 
 .project-card h3 {
