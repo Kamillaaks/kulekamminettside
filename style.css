@@ -1,6 +1,23 @@
+:root {
+  --bg-main: #FDF8F5;
+  --bg-soft: #F3EDE8;
+
+  --accent-peach: #E8A598;
+  --accent-burgundy: #8C3A3A;
+  --accent-sage: #A3B18A;
+  --accent-mustard: #E0B04B;
+
+  --text-main: #3A2E2A;
+  --white: #ffffff;
+}
+
 body {
     padding: 0;
     margin: 0;
+
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -16,8 +33,9 @@ html {
 
     position: sticky;
     top: 0;
+    z-index: 100;
 
-    background-color: #fff;
+    background-color: var(--accent-mustard);
 }
 
 .header-logo {
@@ -66,6 +84,10 @@ html {
     padding: 3rem;
 }
 
+.hero-text h1 {
+    font-family: 'Cooper Black', serif;
+}
+
 .hero-text p {
     line-height: 1.6;
 }
@@ -74,9 +96,25 @@ html {
     max-width: 400px;
 }
 
+.hero-img {
+  width: 500px;
+  aspect-ratio: 1/1;
+
+  mask-image: url(flower.svg);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  -webkit-mask-image: url("flower.svg");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
 .hero-img img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .intro {
@@ -84,13 +122,17 @@ html {
 }
 
 .cta-button {
-    display: inline-block;
     padding: 12px 20px;
-    background: #111;
-    color: #fff;
+    background: var(--accent-peach);
+    color: var(--white);
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-burgundy);
 }
 
 /* OM MEG */
@@ -141,6 +183,7 @@ html {
     height: 40rem;
     width: 100%; 
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .project-card h3 {
