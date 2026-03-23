@@ -6,6 +6,7 @@
   --accent-burgundy: #8C3A3A;
   --accent-sage: #A3B18A;
   --accent-mustard: #E0B04B;
+  --accent-golden: #fdf8e1;
 
   --text-main: #3A2E2A;
   --white: #ffffff;
@@ -15,7 +16,7 @@ body {
     padding: 0;
     margin: 0;
 
-    background-color: var(--bg-main);
+    background-color: var(--accent-golden);
     color: var(--text-main);
     font-family: 'Poppins', sans-serif;
 }
@@ -128,7 +129,8 @@ html {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s ease;
+    
+    margin-top: 50px;
 }
 
 .cta-button:hover {
@@ -138,12 +140,55 @@ html {
 /* OM MEG */
 
 .about {
-    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;    /* plass til toppbølge */
+    padding-bottom: 100px; /* plass til bunnbølge */
 }
 
 .container {
-    max-width: 700px;
+    position: relative;
+    max-width: 100%;
     margin: 0 auto;
+    background-color: var(--accent-sage);
+    z-index: 2; /* ligger over bølgene */
+    padding: 20px;
+}
+
+.intro-text {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    background-color: var(--accent-sage);
+
+    mask-image: url('images/wave.svg');
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    -webkit-mask-image: url('images/wave.svg');
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+
+    z-index: 1; /* bak containeren */
+}
+
+.wave-top {
+    top: 0;
+    
+}
+
+.wave-bot {
+    bottom: 0;
+    transform: rotate(180deg);
 }
 
 /* PROSJEKTER */
