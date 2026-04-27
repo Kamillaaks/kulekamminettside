@@ -1,4 +1,4 @@
-const projects = document.querySelectorAll(".project-card");  
+const projects = document.querySelectorAll(".project-card");  // henter alle elementene med klassen .project-card
 let current = 0;
 
 function showProject(index) {
@@ -25,7 +25,7 @@ document.getElementById("prev").onclick = function () {
     current = current - 1;
 
     if (current < 0) {
-        current = projects.lenght - 1;
+        current = projects.length - 1;
     }
 
     showProject(current);
